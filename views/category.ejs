@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= menuItems %></title>
 </head>
 <body>
-  <a href="/menu/:category">Category</a>
-  <h1>Full Menu</h1>
-  <% RESTAURANT.menu.forEach((val, index)=>{ %>
+    <h1><%= menuItems %></h1>
+    <% RESTAURANT.menu.forEach((val, index)=>{ %>
     <p>Name: <%= RESTAURANT.menu[index].name %></p>
     <p>Price: <%= RESTAURANT.menu[index].price %></p>
     <p>Rating: <%= RESTAURANT.menu[index].rating %></p>
     <p>Details: <%= RESTAURANT.menu[index].details %></p>
     <br>
-    <% }) %>
+        <% }) %>
 </body>
 </html>

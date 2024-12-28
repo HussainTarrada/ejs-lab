@@ -9,11 +9,21 @@ app.get('/', (req, res) => {
 
 app.get('/menu', (req, res) => {
     res.render('menu.ejs', {
-      menu
+      RESTAURANT
+    });
+  });
+
+  app.get('/menu/:category', (req, res) => {
+    const menuItems = req.params.category
+    console.log(menuItems)
+    res.render('category.ejs', {
+      menuItems,
+      RESTAURANT
     });
   });
 
 app.listen(3000);
+
 
 const RESTAURANT = {
     name: 'The Green Byte Bistro',
